@@ -1,0 +1,123 @@
+#include <stdio.h>
+
+int main(void){
+   int n_1, n_2, n_3, n_4, x, n, subst;
+
+   printf("Digite os números da sua sequência de 2 a 4:");
+   scanf("%d", &n);
+
+   x = n-1;
+
+   if(n == 2){
+     printf ("Digite dois números:\n");
+     scanf ("%d", &n_1);
+     scanf ("%d", &n_2);
+
+    if(n_2 > n_1){
+      subst = n_2 - n_1;
+    } 
+
+    else{
+      subst = n_1 - n_2;
+    }
+
+    if(subst == 1){
+      printf ("%d  %d %d-1 Esta é uma sequência feliz",n, n_1, n_2);
+    }
+
+     else{
+       printf ("Esta não é uma sequência feliz");
+    }
+   }
+
+
+   if(n== 3){
+     printf ("Escolha três números:\n");
+     scanf ("%d", &n_1);
+     scanf ("%d", &n_2);
+     scanf ("%d", &n_3);
+
+    if(n_2 > n_1){
+      subst = n_2 - n_1;
+    } 
+
+    else {
+      subst = n_1 - n_2;
+    }
+    if(subst < 1 || subst > 2 ){
+      printf("Esta não é uma sequência feliz");
+     }
+
+     else{
+       if(n_3 > n_2){
+      subst = n_3 - n_2;
+      } 
+
+      else{
+        subst = n_2 - n_3;
+      }
+
+      if(subst == 1 || subst == 2){
+        printf("%d %d %d %d-1 Esta é uma sequência feliz", n, n_1, n_2, n_3);
+      }
+
+      else{
+       printf ("Esta não é uma sequência feliz");
+    }
+     }
+
+    
+   }
+
+
+   if ( n == 4){
+     printf ("Escolha quatro números:\n");
+     scanf ("%d", &n_1);
+     scanf ("%d", &n_2);
+     scanf ("%d", &n_3);
+     scanf ("%d", &n_4);
+
+
+     if(n_2 > n_1){
+      subst = n_2 - n_1;
+    } 
+
+    else{
+      subst = n_1 - n_2;
+    }
+    if(subst < 1 || subst > 3 ){
+      printf("Esta não é uma sequência feliz");
+     }
+
+     else{
+       if(n_3 > n_2){
+      subst = n_3 - n_2;
+      } 
+
+      else{
+        subst = n_2 - n_3;
+      }
+
+      if(subst < 1 || subst > 3 ){
+      printf ("Esta não é uma sequência feliz");
+      } 
+
+      else {
+        if(n_4 > n_3){
+      subst = n_4 - n_3;
+      } 
+      else{
+        subst = n_3 - n_4;
+      }
+      }
+
+
+      if(subst == 1 || subst == 3){
+        printf("%d  %d %d %d %d-1 Esta é uma sequência feliz", n, n_1, n_2, n_3, n_4);
+      }
+      else{
+       printf("Esta não é uma sequência feliz");
+    }
+     }
+   }
+}
